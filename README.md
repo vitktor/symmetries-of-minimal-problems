@@ -1,0 +1,1 @@
+# symmetries-of-minimal-problems
