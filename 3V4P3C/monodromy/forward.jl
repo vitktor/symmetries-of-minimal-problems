@@ -44,3 +44,9 @@ function fabricateSample()
     a = dehomogenization_coeffs(ts[2])
     return (vcat(R[:], t[:], α[:]), vcat(x[:], s[:], a))
 end
+
+F = generate_equations()
+x₀, p₀ = fabricateSample()
+norm(F(x₀, p₀))
+
+F = run_monodromy(F, ([x₀], p₀), max_loops_no_progress=1)
